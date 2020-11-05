@@ -1,0 +1,12 @@
+Package: murdermysteryr
+Type: Package
+Title: Data package for classic murder mystery. 
+Version: 0.1.0
+Authors@R: c(
+    person("April", "Zhao", email="abzhao100@gmail.com", role = c("aut", "cre"))
+    )
+Maintainer: April Zhao <abzhao100@gmail.com>
+Description: Full text data for 9 murder mystery work from 3 classic mystery writers: Edgar Allan Poe, Sir Conan Doyle, and Agatha Christie, ready for data analysis.
+License: MIT
+Encoding: UTF-8
+LazyData: true
