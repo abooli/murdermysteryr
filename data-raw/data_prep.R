@@ -1,16 +1,17 @@
 library(gutenbergr)
+library(dplyr)
 
-#just a comment here
 
-masque <- gutenberg_download(1064)$text
-cask <- gutenberg_download(1063)$text
-usher <- gutenberg_download(932)$text
-hound <- gutenberg_download(2852)$text
-signfour <- gutenberg_download(2097)$text
-scarlet <- gutenberg_download(244)$text
-links <- gutenberg_download(58866)$text
-adversary <- gutenberg_download(1155)$text
-styles <- gutenberg_download(863)$text
+masque <- tbl_df(gutenberg_download(1064)$text)
+cask <- tbl_df(gutenberg_download(1063)$text)
+usher <- tbl_df(gutenberg_download(932)$text)
+hound <- tbl_df(gutenberg_download(2852)$text)
+signfour <- tbl_df(gutenberg_download(2097)$text)
+scarlet <- tbl_df(gutenberg_download(244)$text)
+links <- tbl_df(gutenberg_download(58866)$text)
+links <- links[5:length(links)]
+adversary <- tbl_df(gutenberg_download(1155)$text)
+styles <- tbl_df(gutenberg_download(863)$text)
 
 ## Add data files to project
 devtools::use_data(masque, overwrite = TRUE)
